@@ -48,6 +48,8 @@ class TestSauceDemo(unittest.TestCase):
         produtos_page.adicionar_primeiro_produto()
         self.assertEqual(produtos_page.obter_quantidade_carrinho(), "1")
 
+        self.assertEqual(produtos_page.obter_quantidade_carrinho(), "1")
+
         produtos_page.ir_para_carrinho()
 
         carrinho_page = CarrinhoPage(self.driver)
