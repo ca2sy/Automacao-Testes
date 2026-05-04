@@ -167,6 +167,14 @@ Dois jobs independentes são executados em paralelo:
  
 ![Selenium - Fluxo de compra](prints/selenium-fluxo-compra.png)
 > Execução dos testes E2E validando o fluxo completo de compra no SauceDemo.
+
+### CI/CD 
+
+![Selenium - Fluxo de compra na Pipeline](prints/selenium-ci.png)
+
+![Newman- Resultados dos testes na Pipeline](prints/selenium-ci.png)
+
+![Resultado positivo - Ambos os testes na Pipeline](prints/ci.png)
  
 ---
 
