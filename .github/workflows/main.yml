@@ -1,0 +1,51 @@
+name: Pipeline_Operacao_CI
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+
+  web-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixando código
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Instalar dependências WEB
+        run: |
+          pip install selenium webdriver-manager python-dotenv
+
+      - name: Rodar testes WEB
+        env:
+          SAUCE_USERNAME: standard_user
+          SAUCE_PASSWORD: secret_sauce
+          SAUCE_URL: https://www.saucedemo.com/
+        run: python test_login.py
+
+  api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixando código
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar Newman
+        run: npm install -g newman
+
+      - name: Rodar testes API
+        run: |
+          newman run tests-api/teste-petstore.json \
+          --env-var "petId=241205" \
+          --env-var "username=cassy_test"
