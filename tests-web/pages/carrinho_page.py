@@ -8,10 +8,10 @@ class CarrinhoPage:
  
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 20)
  
     def obter_quantidade_itens(self):
-        itens = self.wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "cart_item")))
+        itens = self.wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "cart_item")))
         return len(itens)
  
     def ir_para_checkout(self):
