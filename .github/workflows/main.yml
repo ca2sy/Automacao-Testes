@@ -31,7 +31,7 @@ jobs:
           cd tests-web
           export PYTHONPATH=.
           cd test
-          python test_login.py
+          python test.py
 
 
   api-tests:
