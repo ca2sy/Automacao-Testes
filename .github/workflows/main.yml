@@ -30,7 +30,7 @@ jobs:
         run: |
           cd tests-web
           export PYTHONPATH=.
-          cd tests
+          cd test
           python test_login.py
 
 
