@@ -29,9 +29,7 @@ jobs:
           SAUCE_URL: https://www.saucedemo.com/
         run: |
           cd tests-web
-          export PYTHONPATH=.
-          cd test
-          python test.py
+          PYTHONPATH=$(pwd) python -m test.test
 
 
   api-tests:

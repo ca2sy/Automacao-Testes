@@ -62,55 +62,6 @@
           "response": []
         },
         {
-          "name": "Upload de Imagem do Pet",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.test(\"Upload OK\", () => {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "});"
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "file",
-                  "type": "file",
-                  "uuid": "f78716ce-08f7-4cdb-8e73-5def1c703685",
-                  "src": "/C:/Users/faela/Downloads/WhatsApp Image 2026-04-28 at 10.01.28.jpeg"
-                }
-              ]
-            },
-            "url": {
-              "raw": "https://petstore.swagger.io/v2/pet/{{petId}}/uploadImage",
-              "protocol": "https",
-              "host": [
-                "petstore",
-                "swagger",
-                "io"
-              ],
-              "path": [
-                "v2",
-                "pet",
-                "{{petId}}",
-                "uploadImage"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
           "name": "Atualizar pet",
           "event": [
             {
@@ -727,15 +678,15 @@
   "variable": [
     {
       "key": "petId",
-      "value": ""
+      "value": "241205"
     },
     {
       "key": "orderId",
-      "value": ""
+      "value": "12345"
     },
     {
       "key": "username",
-      "value": ""
+      "value": "cassy_test"
     }
   ]
 }
