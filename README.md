@@ -170,11 +170,8 @@ Dois jobs independentes são executados em paralelo:
 
 ### CI/CD 
 
-![Selenium - Fluxo de compra na Pipeline](prints/selenium-ci.png)
 
-![Newman- Resultados dos testes na Pipeline](prints/selenium-ci.png)
-
-![Resultado positivo - Ambos os testes na Pipeline](prints/ci.png)
+![Resultado positivo - Testes na Pipeline](prints/ci.png)
  
 ---
 
